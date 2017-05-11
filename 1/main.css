@@ -1,0 +1,10 @@
+body {
+    background: #333333;
+}
+
+form {
+    font-family: "Helvetica Neue Light", sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
