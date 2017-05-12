@@ -30,14 +30,22 @@ const h1 = document.querySelector('h1'),
     description = document.querySelector('.description')
 
 window.onload = () => {
-    h1.classList.add('fly-in')
-    description.classList.add('fly-in')
-    let ms = 0
+    let ms = 0, interv = 100
+    setTimeout(() => {
+        h1.classList.add('fly-in')
+    }, ms)
+    ms+=interv
+
+    setTimeout(() => {
+        description.classList.add('fly-in')
+    }, ms)
+    ms+=interv
+
     for (let i = 0; i < challengeElts.length; i++) {
         const element = challengeElts[i]
         setTimeout(() => {
             element.classList.add('fly-in')
         }, ms)
-        ms += 200
+        ms += interv
     }
 }
