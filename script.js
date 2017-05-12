@@ -5,7 +5,8 @@ const challengesElt = document.querySelector('.challenges'),
             href: '/1',
             imgSrc: './images/1.svg'
         }
-    ]
+    ],
+    challengeElts = []
 
 for (let i = 0; i < challenges.length; i++) {
     const challenge = challenges[i],
@@ -22,6 +23,7 @@ for (let i = 0; i < challenges.length; i++) {
     li.appendChild(p)
     a.appendChild(li)
     challengesElt.appendChild(a)
+    challengeElts.push(a)
 }
 
 const h1 = document.querySelector('h1'),
@@ -30,5 +32,12 @@ const h1 = document.querySelector('h1'),
 window.onload = () => {
     h1.classList.add('fly-in')
     description.classList.add('fly-in')
-    challengesElt.classList.add('fly-in')
+    let ms = 0
+    for (let i = 0; i < challengeElts.length; i++) {
+        const element = challengeElts[i]
+        setTimeout(() => {
+            element.classList.add('fly-in')
+        }, ms)
+        ms += 200
+    }
 }

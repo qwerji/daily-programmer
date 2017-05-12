@@ -55,13 +55,14 @@ h1 {
 .challenges {
     display: flex;
     margin: 40px auto 0;
-    transform: translateY(100vh);
-    transition: 1s ease transform;
     align-content: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    overflow-y: hidden;
 }
     .challenges a {
+        transform: translateY(100vh);
+        transition: 1s ease transform;
         display: inline-block;
         flex-basis: 200px;
         width: 200px;
@@ -73,6 +74,7 @@ h1 {
         position: relative;
     }
     .challenges a:hover {
+        transition: .3s ease transform;
         transform: translateY(-7px) scale(1.02);
     }
     .challenges li {
@@ -89,7 +91,17 @@ h1 {
         color: white;
     }
 
-.fly-in {
+body .fly-in {
     transform: none;
     transition-timing-function: cubic-bezier(0.25, 0.1, 0.06, 0.99);
+}
+
+@media all and (max-width: 400px) {
+    h1 {
+        font-size: 25px;
+    }
+    .description {
+        width: calc(85vw - 60px);
+        margin-left: 15vw;
+    }
 }
