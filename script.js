@@ -4,6 +4,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Information Prompt',
             href: '/1',
             imgSrc: './images/1.svg'
+        },
+        {
+            title: 'Interest Calculator',
+            href: '/2',
+            imgSrc: './images/2.svg'
         }
     ],
     challengeElts = []

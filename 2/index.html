@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | daily programmer | 2</title>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.11.0/styles/agate.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <a href="https://github.com/qwerji/daily-programmer/tree/master/2"><h2>Simple Interest Calculator</h2></a>
+        <form class="calculator">
+            <input type="text" name="principal" placeholder="Principal ($)" class="principal blocked">
+            <input type="text" name="rate" placeholder="Rate (%)" class="rate blocked">
+            <input type="text" name="time" placeholder="Time" class="time">
+            <select name="time-units" class="time-units">
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
+                <option value="years" selected>Years</option>
+            </select>
+            <div>
+                <input type="checkbox" name="add-principal" class="add-principal">
+                <label for="add-principal">+Principal</label>
+            </div>
+        </form>
+        <p class="answer">Total Accrued Amount: $<span>0.00</span></p>
+    </main>
+    <!-- <pre><code class="lang-js">
+        
+    </code></pre> -->
+    <script src="script.js"></script>
+</body>
+</html>

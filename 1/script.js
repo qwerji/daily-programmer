@@ -1,4 +1,4 @@
-// r/dailyprogrammer challenge #1
+// r/dailyprogrammer easy challenge #1
 // https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/
 
 // Challenge:
