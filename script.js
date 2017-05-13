@@ -9,6 +9,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Interest Calculator',
             href: '/2',
             imgSrc: './images/2.svg'
+        },
+        {
+            title: 'Text-Based Adventure',
+            href: '/3',
+            imgSrc: './images/3.svg'
         }
     ],
     challengeElts = []
