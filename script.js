@@ -14,6 +14,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Text-Based Adventure',
             href: '/3',
             imgSrc: './images/3.svg'
+        },
+        {
+            title: 'Number Guesser',
+            href: '/4',
+            imgSrc: './images/4.svg'
         }
     ],
     challengeElts = []
