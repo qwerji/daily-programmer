@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Monaco, monospace;
+}
+
+body {
+    background: #535353;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    color: white;
+}
+
+table {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    table-layout: fixed;
+}
+
+td, td div {
+    border-radius: 2px;
+    height: 60px;
+}
+
+tbody:first-of-type {
+    height: 100px;
+}
+
+td:first-of-type {
+    text-align: center;
+}
+
+.hour-block {
+    background: lightgrey;
+    transition: .2s ease filter;
+    cursor: pointer;
+}
+
+.hour-block:hover {
+    filter: brightness(1.08);
+}
+
+td div {
+    background: lightgreen;
+    padding: 2px;
+    color: black;
+    overflow-y: scroll;
+}
+
+p {
+    font-size: 12px;
+}
+
+button {
+    padding: 2px;
+    cursor: pointer;
+}

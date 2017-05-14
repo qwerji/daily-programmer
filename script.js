@@ -19,6 +19,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Number Guesser',
             href: '/4',
             imgSrc: './images/4.svg'
+        },
+        {
+            title: 'Week Planner',
+            href: '/5',
+            imgSrc: './images/5.svg'
         }
     ],
     challengeElts = []
