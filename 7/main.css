@@ -1,0 +1,24 @@
+body {
+    font-family: "Helvetica Neue Light", sans-serif;
+    color: white;
+    background: #333333;
+}
+
+main {
+    text-align: center;
+    height: 200px;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.display {
+    height: 30px;
+    min-width: 60px;
+    text-align: center;
+    line-height: 30px;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    padding: 0 10px;
+}

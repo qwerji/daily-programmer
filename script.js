@@ -29,6 +29,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Stopwatch',
             href: '/6',
             imgSrc: './images/6.svg'
+        },
+        {
+            title: 'Caesar Cipher',
+            href: '/7',
+            imgSrc: './images/7.svg'
         }
     ],
     challengeElts = []

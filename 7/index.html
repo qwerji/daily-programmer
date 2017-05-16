@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | daily programmer | 7</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.11.0/styles/agate.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <h2>Caesar Cipher</h2>
+        <input type="text" class="secret-message" placeholder="Secret Message">
+        <p><button class="encrypt">Encrypt</button><button class="decrypt">Decrypt</button></p>
+        <p class="display"></p>
+    </main>
+    <pre><code class="lang-js">
+    // r/dailyprogrammer easy challenge #3
+    // https://www.reddit.com/r/dailyprogrammer/comments/pkw2m/2112012_challenge_3_easy/
+
+    // Challenge:
+    // Welcome to cipher day!
+    // write a program that can encrypt texts with an alphabetical caesar cipher. 
+    // This cipher can ignore numbers, symbols, and whitespace.
+    // for extra credit, add a "decrypt" function to your program!
+
+    // Notes:
+    // This probably isn't anything groundbreaking, but I decided to use the length
+    // of the string to determine the rotation number, and the character codes as the
+    // guide.
+
+    function easyCipher(str, decrypt=false) {
+        // lowercase letters only for simplicity
+        const regex = /^[a-z]+$/
+        str = str.toLowerCase()
+        // Rotate forwards when encrypting
+        let result = '', num = str.length
+        // Rotate backwards when decrypting
+        if (decrypt) num = -str.length
+        for (let i = 0; i < str.length; i++) {
+            if (regex.test(str[i])) {
+                // Normalize code to 0-25
+                let code = str.charCodeAt(i) + num - 97
+                // Wrap code around back into range
+                if (code > 25) {
+                    code %= 26
+                }
+                while (code < 0) {
+                    code += 26
+                }
+                // Move code back to original offset
+                code += 97
+                // Get the character at that code
+                result += String.fromCharCode(code)
+            } else {
+                result += str[i]
+            }
+        }
+        return result
+    }
+    </code></pre>
+    <script src="script.js"></script>
+</body>
+</html>
