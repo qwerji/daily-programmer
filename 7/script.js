@@ -29,13 +29,15 @@ function easyCipher(str, decrypt=false) {
     // Rotate forwards when encrypting, backwards when decrypting
     let result = '', num = str.length
     if (decrypt) {
-        num = -str.length
-    }
-    // Offset by 13 (arbitrarily) if the length is 26
-    if (num === -26) {
-        num -= 13
-    } else if (num === 26) {
-        num += 13
+        num = -str.length 
+        // Offset by 1 if the length is 26
+        if (num % 26 === 0) {
+            num -= 1
+        }
+    } else {
+        if (num % 26 === 0) {
+            num += 1
+        }
     }
     for (let i = 0; i < str.length; i++) {
         if (regex.test(str[i])) {
