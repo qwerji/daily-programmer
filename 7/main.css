@@ -6,7 +6,6 @@ body {
 
 main {
     text-align: center;
-    /*height: 200px;*/
 }
 
 h2 {
@@ -14,7 +13,6 @@ h2 {
 }
 
 .display {
-    /*height: 30px;*/
     min-width: 60px;
     text-align: center;
     line-height: 30px;
