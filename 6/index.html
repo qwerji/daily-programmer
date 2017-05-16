@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | daily programmer | 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <main>
+        <h1 class="display">0:00:00:000</h1>
+        <div class="buttons">
+            <button type="button" class="button button-royal button-rounded start-stop">Start</button>
+            <button type="button" class="button button-royal button-rounded lap">Lap</button>
+            <button type="button" class="button button-royal button-rounded reset">Reset</button>
+            <button type="button" class="button button-royal button-rounded save">Save</button>
+        </div>
+        <ol class="laps"></ol>
+    </main>
+    <div class="load-container">
+        <button class="button button-royal button-rounded load">Load Saved Sessions</button>
+        <button class="button button-royal button-rounded clear">Clear Saved Sessions</button>
+        <section class="loaded-times"></section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

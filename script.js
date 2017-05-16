@@ -24,6 +24,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Week Planner',
             href: '/5',
             imgSrc: './images/5.svg'
+        },
+        {
+            title: 'Stopwatch',
+            href: '/6',
+            imgSrc: './images/6.svg'
         }
     ],
     challengeElts = []
