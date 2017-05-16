@@ -11,6 +11,7 @@
 // This probably isn't anything groundbreaking, but I decided to use the length
 // of the string to determine the rotation number, and the character codes as the
 // guide.
+// rdcvgpih, ndj uxvjgts xi dji! hcpxats xi.
 
 const input = document.querySelector('.secret-message'),
     encryptButton = document.querySelector('.encrypt'),
@@ -25,10 +26,17 @@ function easyCipher(str, decrypt=false) {
     const regex = /^[a-z]+$/
     // lowercase for simplicity
     str = str.toLowerCase()
-    // Rotate forwards when encrypting
+    // Rotate forwards when encrypting, backwards when decrypting
     let result = '', num = str.length
-    // Rotate backwards when decrypting
-    if (decrypt) num = -str.length
+    if (decrypt) {
+        num = -str.length
+    }
+    // Offset by 13 (arbitrarily) if the length is 26
+    if (num === -26) {
+        num -= 13
+    } else if (num === 26) {
+        num += 13
+    }
     for (let i = 0; i < str.length; i++) {
         if (regex.test(str[i])) {
             // Normalize code to 0-25
