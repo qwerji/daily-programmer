@@ -39,6 +39,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Password Generator',
             href: '/8',
             imgSrc: './images/8.svg'
+        },
+        {
+            title: 'Calculating 𝜋',
+            href: '/9',
+            imgSrc: './images/9.svg'
         }
     ],
     challengeElts = []
