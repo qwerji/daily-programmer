@@ -34,6 +34,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Caesar Cipher',
             href: '/7',
             imgSrc: './images/7.svg'
+        },
+        {
+            title: 'Password Generator',
+            href: '/8',
+            imgSrc: './images/8.svg'
         }
     ],
     challengeElts = []
