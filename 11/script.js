@@ -3,22 +3,43 @@
 
 // Challenge:
 // write a program that will print the song "99 bottles of beer on the wall".
-// for extra credit, do not allow the program to print each loop on a new line. (I ignored this)
 
 function singSong() {
-    let containerCount = 99
-    const containerType = 'snifter',
-        beverage = 'rustic, local saison',
-        units = () => `${containerType}${containerCount === 1 ? '' : 's'} of ${beverage}`,
-        getCount = () => containerCount === 0 ? 'no more' : containerCount
-        
-    console.group('Song')
-    while (containerCount > 0) {
-        let lyric = `${getCount()} ${units()} on the wall, ${getCount()} ${units()}! Take one down, pass it around, `
-        containerCount--
-        lyric += `${getCount()} ${units()} on the wall!`
-        console.log(lyric)
+    let emptyBottleRequestCount = 0
+    const initialContainerCount = 99,
+        units = () => `bottle${containerCount === 1 ? '' : 's'} of beer`,
+        count = () => {
+            if (containerCount === 0) {
+                emptyBottleRequestCount++
+                if (emptyBottleRequestCount === 2) {
+                    return 'No more'
+                }
+                return 'no more'
+            }
+            return containerCount
+        },
+        action = () => {
+            if (containerCount === 0) {
+                containerCount = initialContainerCount 
+                return 'Go to the store, buy some more'
+            }
+            containerCount--
+            return 'Take one down, pass it around'
+        }
+
+    let containerCount = initialContainerCount
+    while (containerCount >= -1) {
+        const c = count(), u = units()
+        printLyric(
+            `${c} ${u} on the wall, ${c} ${u}! ${action()}, ${count()} ${units()} on the wall!`
+        )
+        if (containerCount === initialContainerCount) break
     }
-    console.groupEnd('Song')
 }
 singSong()
+
+function printLyric(lyric) {
+    const p = document.createElement('p')
+    p.textContent = lyric
+    document.body.appendChild(p)
+}
