@@ -49,11 +49,16 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Morse Code Translator',
             href: '/10',
             imgSrc: './images/10.svg'
+        },
+        {
+            title: 'Beverage Song',
+            href: '/11',
+            imgSrc: './images/11.svg'
         }
     ],
     challengeElts = []
 
-for (let i = 0; i < challenges.length; i++) {
+for (let i = challenges.length-1; i >= 0; i--) {
     const challenge = challenges[i],
         li = document.createElement('li'),
         p = document.createElement('p'),
