@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: #191919;
+}
+
+h2, .title {
+    font-size: 40px;
+    text-align: center;
+    color: #FFE548;
+    cursor: default;
+}
+
+h2 {
+    /*width: 33.333333%;*/
+    width: 50%;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px; 
+}
+
+.title {
+    margin: 20px 0;
+}
+
+.play, .title {
+    transition: 0.3s ease color, 0.1s ease text-shadow;
+}
+
+.title.active, .title:hover, .play:hover {
+    text-shadow: 0px 0px 20px #F58732;
+}
+
+.play:hover {
+    cursor: pointer;
+}
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(50,50,50,1);
+    color: rgba(255,255,255,0.9);
+    font-size: 24px;
+    width: calc(47% - 2px);
+    height: 300px;
+    padding: 1.5%;
+    resize: none;
+    vertical-align: top;
+}
+
+textarea.morse {
+    font-family: Monaco, monospace;
+}

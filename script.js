@@ -44,6 +44,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Calculating 𝜋',
             href: '/9',
             imgSrc: './images/9.svg'
+        },
+        {
+            title: 'Morse Code Translator',
+            href: '/10',
+            imgSrc: './images/10.svg'
         }
     ],
     challengeElts = []
