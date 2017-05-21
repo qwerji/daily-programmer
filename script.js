@@ -54,6 +54,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: 'Beverage Song',
             href: '/11',
             imgSrc: './images/11.svg'
+        },
+        {
+            title: 'Integer/English Translator',
+            href: '/12',
+            imgSrc: './images/12.svg'
         }
     ],
     challengeElts = []

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Monaco, monospace;
+}
+
+body {
+    background: rgba(50,50,50,1);
+    overflow: hidden;
+}
+
+textarea {
+    background: rgba(50,50,50,1);
+    color: rgba(255,255,255,0.9);
+    font-size: 24px;
+    width: 97%;
+    height: 46.45vh;
+    padding: 1.5%;
+    resize: none;
+    vertical-align: top;
+    border: none;
+}
+textarea:focus {
+    outline: 0;
+}
