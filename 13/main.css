@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Monaco, monospace;
+}
+
+body {
+    background: #333333;
+}
+
+.triangle-member {
+    position: absolute;
+    overflow-x: hidden;
+    width: 25px;
+    height: 25px;
+    background: lightblue;
+    border-radius: 20px;
+    text-align: center;
+    cursor: default;
+    transition: .2s ease filter;
+}
+.even {
+    background: lightcoral;
+}
+    .triangle-member p {
+        line-height: 25px;
+        font-size: 12px;
+    }
+
+.display {
+    position: absolute;
+    opacity: 0;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 3px 6px;
+    line-height: 25px;
+    text-align: center;
+    background: lightgreen;
+    transition: .1s ease all;
+    z-index: 10;
+}
+.triangle-member:hover {
+    filter: brightness(1.1);
+}
+
+.triangle {
+    position: relative;
+    margin: 20px auto;
+}
+
+h1, h3, .title {
+    margin-top: 10px;
+    color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+.title:hover {
+    text-decoration: underline;
+}
+
+.what {
+    text-align: center;
+    display: block;
+    margin: 10px auto 0;
+    width: 150px;
+    color: lightblue;
+    text-decoration: none;
+}
+.what:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.interface {
+    text-align: center;
+    margin-top: 10px;
+}
+.interface input {
+    width: 75px;
+}
+.interface button {
+    padding: 3px;
+}
