@@ -110,6 +110,5 @@ window.onload = () => {
     }
 }
 
-document.body.style.background = `url(./images/time-backgrounds/${
-    Math.floor((((new Date().getHours() - 4 + 24) % 24) / 24) * 8)
-}.png) no-repeat center center fixed`
+document.body.style.backgroundImage = `url(./images/time-backgrounds/${
+    Math.floor((((new Date().getHours() - 4 + 24) % 24) / 24) * 8)}.png)`
