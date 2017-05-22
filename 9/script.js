@@ -52,5 +52,3 @@ Took ${((Date.now() - startTime)/1000).toFixed(2)}s to calculate.`
     console.log(`Stopped by failsafe?: ${!(odds < failsafe)}`)
     },10)
 })
-
-console.log()

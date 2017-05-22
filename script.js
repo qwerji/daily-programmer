@@ -64,6 +64,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Pascal/Sierpinski's Triangle",
             href: '/13',
             imgSrc: './images/13.svg'
+        },
+        {
+            title: "Hangman",
+            href: '/14',
+            imgSrc: './images/14.svg'
         }
     ],
     challengeElts = []
