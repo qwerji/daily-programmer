@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Monaco, monospace;
+    background: #333333;
+}
+
+.grid {
+    width: 50%;
+}
+    .grid * {
+        width: 10%;
+    }
+
+.grid *, .primes * {
+    display: inline-block;
+    margin: 2px;
+}
+
+.sequence {
+    color: seagreen;
+}
+.missing {
+    color: lightsalmon;
+}

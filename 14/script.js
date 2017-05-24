@@ -1,4 +1,4 @@
-// r/dailyprogrammer difficult challenge #14
+// r/dailyprogrammer difficult challenge #10
 // https://www.reddit.com/r/dailyprogrammer/comments/pv92x/2182012_challenge_10_difficult/
 
 // Challenge:
