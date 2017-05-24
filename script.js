@@ -69,6 +69,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Hangman",
             href: '/14',
             imgSrc: './images/14.svg'
+        },
+        {
+            title: "Sieve of Sundaram",
+            href: '/15',
+            imgSrc: './images/15.svg'
         }
     ],
     challengeElts = []
