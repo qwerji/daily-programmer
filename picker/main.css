@@ -34,6 +34,7 @@ select:first-of-type {
 button {
     padding: 5px 10px;
     float: right;
+    margin-right: 5px;
 }
 select, button {
     font-size: 15px;
@@ -61,27 +62,27 @@ select, button {
             overflow-x: hidden;
         }
         .challenges li input { /* checkbox */
-            width: 6%;
-            margin: 4px 0 0 2%;
+            width: 5%;
+            margin: 4px 0 0 3%;
+            /*text-align: center;*/
         }
         .challenges li p:nth-of-type(1) { /* number */
-            width: 7%;
-        }
-        .challenges li p:nth-of-type(2) { /* title */
-            width: 40%;
-        }
-        .challenges li p:nth-of-type(3) { /* difficulty */
-            width: 20%;
-        }
-        .challenges li p:nth-of-type(4) { /* date */
-            width: 15%;
+            width: 5%;
         }
         .challenges li a { /* link */
-            width: 10%;
-            color: dodgerblue;
-            text-align: center;
+            width: 50%;
+            color: royalblue;
             text-decoration: none;
         }
         .challenges li a:hover {
             text-decoration: underline;
+        }
+        .challenges li a:visited {
+            color: dodgerblue;
+        }
+        .challenges li p:nth-of-type(2) { /* difficulty */
+            width: 27%;
+        }
+        .challenges li p:nth-of-type(3) { /* date */
+            width: 10%;
         }

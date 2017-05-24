@@ -18,18 +18,16 @@ function createMasterList() {
     Challenges.forEach((challenge,i) => {
         const li = document.createElement('li'),
             p1 = document.createElement('p'),
+            a = document.createElement('a'),
             p2 = document.createElement('p'),
             p3 = document.createElement('p'),
-            p4 = document.createElement('p'),
-            a = document.createElement('a'),
             checkbox = document.createElement('input')
         checkbox.type = 'checkbox'
         
         p1.textContent = challenge.day_number
-        p2.textContent = challenge.title
-        p3.textContent = challenge.difficulty
-        p4.textContent = challenge.date
-        a.textContent = "Post"
+        a.textContent = challenge.title
+        p2.textContent = challenge.difficulty
+        p3.textContent = challenge.date
         a.href = challenge.link
         a.target = "_blank"
         checkbox.addEventListener('click', function(e) {
@@ -48,10 +46,9 @@ function createMasterList() {
 
         li.appendChild(checkbox)
         li.appendChild(p1)
+        li.appendChild(a)
         li.appendChild(p2)
         li.appendChild(p3)
-        li.appendChild(p4)
-        li.appendChild(a)
         li.dataset.index = i
 
         masterList.push(li)
