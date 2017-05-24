@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>qwerji | daily programmer | challenge picker</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>r/dailyprogrammer challenge picker</h1>
+    <div class="controls">
+        <select name="sort">
+            <option selected disabled value="">Sort</option>
+            <option value="">No Sort</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="difficult">Most Difficult</option>
+            <option value="easy">Easiest</option>
+        </select>
+        <select name="filter">
+            <option selected disabled value="all">Filter</option>
+            <option value="all">All</option>
+            <option value="easy">Easy</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="hard">Hard</option>
+            <option value="complete">Completed</option>
+            <option value="incomplete">Not Completed</option>
+        </select>
+        <button class="random">Get New Challenge</button>
+    </div>
+    <ul class="challenges"></ul>
+    <script src="challenges.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
