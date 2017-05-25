@@ -1,0 +1,13 @@
+body {
+    background: #333333;
+    color: white;
+    font-family: Monaco, monospace;
+}
+.calculate {
+    display: block;
+    width: 60px;
+    margin: 10px auto;
+}
+.display {
+    text-align: center;
+}
