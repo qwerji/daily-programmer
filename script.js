@@ -127,3 +127,5 @@ window.onload = () => {
 
 document.body.style.backgroundImage = `url(./images/time-backgrounds/${
     Math.floor((((new Date().getHours() - 4 + 24) % 24) / 24) * 8)}.png)`
+
+console.log('test')
