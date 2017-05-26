@@ -79,6 +79,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Fleas On A Carpet",
             href: '/16',
             imgSrc: './images/16.svg'
+        },
+        {
+            title: "Filter String",
+            href: '/17',
+            imgSrc: './images/17.svg'
         }
     ],
     challengeElts = []
