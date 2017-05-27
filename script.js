@@ -84,6 +84,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Filter String",
             href: '/17',
             imgSrc: './images/17.svg'
+        },
+        {
+            title: "Phone Number Text Conversion",
+            href: '/18',
+            imgSrc: './images/18.svg'
         }
     ],
     challengeElts = []

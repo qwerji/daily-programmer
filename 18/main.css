@@ -1,0 +1,12 @@
+body {
+    background: #333333;
+    font-family: Monaco, monospace;
+}
+.input, .convert, .display {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+.display {
+    color: white;
+}
