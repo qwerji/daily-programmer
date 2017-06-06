@@ -62,6 +62,11 @@ h1 {
     animation-direction: normal;
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(-360deg) }
+}
+
 @keyframes flow {
     from { transform: rotateX(0deg) }
     to { transform: rotateX(-360deg) }
