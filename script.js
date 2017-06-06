@@ -89,6 +89,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Phone Number Text Conversion",
             href: '/18',
             imgSrc: './images/18.svg'
+        },
+        {
+            title: "Sudoku Solver",
+            href: '/19',
+            imgSrc: './images/19.svg'
         }
     ],
     challengeElts = []
