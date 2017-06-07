@@ -78,9 +78,6 @@ solveButton.addEventListener('click', () => {
 })
 
 Sudoku.onSolve = (solved, time) => {
-    solving = false
-    solveButton.classList.remove('solving')
-    clearButton.classList.remove('solving')
     display.textContent = `${time}ms`
     stopGridAnimation(solved)
 }
@@ -95,9 +92,14 @@ clearButton.addEventListener('click', () => {
     display.textContent = ''
 })
 
-function endAnimation(val) {
+function endAnimation(val,last) {
     this.value = val
     this.classList.remove('flow')
+    if (last) {
+        solving = false
+        solveButton.classList.remove('solving')
+        clearButton.classList.remove('solving')
+    }
 }
 
 function animateGrid() {
@@ -116,10 +118,13 @@ function stopGridAnimation(solved) {
     display.style.animationName = ''
     for (let i = 0; i < inputGrid.length; i++) {
         for (let j = 0; j < inputGrid[i].length; j++) {
-            let input = inputGrid[i][j]
+            let input = inputGrid[i][j], last = false
+            if (i === inputGrid.length-1 && j === i) {
+                last = true
+            }
             input.addEventListener(
                 'animationiteration', 
-                endAnimation.bind(input,solved[i][j])
+                endAnimation.bind(input,solved[i][j],last)
             )
         }
     }
