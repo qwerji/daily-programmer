@@ -17,17 +17,17 @@
 // with an "onSolved" callback.
 
 const testPuzzle = [
-    [0, 6, 1,   0, 0, 7,   0, 0, 3],
-    [0, 9, 2,   0, 0, 3,   0, 0, 0],
+    [0, 8, 0,   0, 0, 0,   1, 5, 0],
+    [4, 0, 6,   5, 0, 9,   0, 8, 0],
+    [0, 0, 0,   0, 0, 8,   0, 0, 0],
+
     [0, 0, 0,   0, 0, 0,   0, 0, 0],
+    [0, 0, 2,   0, 4, 0,   0, 0, 3],
+    [3, 0, 0,   8, 0, 1,   0, 0, 0],
 
-    [0, 0, 8,   5, 3, 0,   0, 0, 0],
-    [0, 0, 0,   0, 0, 0,   5, 0, 4],
-    [5, 0, 0,   0, 0, 8,   0, 0, 0],
-
-    [0, 4, 0,   0, 0, 0,   0, 0, 1],
-    [0, 0, 0,   1, 6, 0,   8, 0, 0],
-    [6, 0, 0,   0, 0, 0,   0, 0, 0]
+    [9, 0, 0,   0, 7, 0,   0, 0, 0],
+    [6, 0, 0,   0, 0, 0,   0, 0, 4],
+    [1, 5, 0,   0, 0, 0,   0, 9, 0]
 ]
 
 const inputs = document.querySelectorAll('.box'),
@@ -54,11 +54,6 @@ for (let i = 0; i < inputGrid.length; i++) {
 
 solveButton.addEventListener('click', () => {
     if (solving) return
-    solving = true
-    solveButton.classList.add('solving')
-    clearButton.classList.add('solving')
-    display.textContent = '|'
-    animateGrid()
     const puzzle = [[]]
     inputGrid.forEach(row => row.forEach(input => {
         let val = parseInt(input.value)
@@ -70,20 +65,24 @@ solveButton.addEventListener('click', () => {
             puzzle.push([])
         }
     }))
-    Sudoku.solve(puzzle)
+    if (Sudoku.isValid(puzzle)) {
+        solving = true
+        animateGrid()
+        solveButton.classList.add('solving')
+        clearButton.classList.add('solving')
+        display.textContent = '|'
+        Sudoku.solve(puzzle)
+    } else {
+        display.textContent = 'Invalid puzzle.'
+    }
 })
 
 Sudoku.onSolve = (solved, time) => {
     solving = false
     solveButton.classList.remove('solving')
     clearButton.classList.remove('solving')
-    if (Sudoku.isValid(solved)) {
-        display.textContent = `${time}ms`
-        stopGridAnimation(solved)
-    } else {
-        display.textContent = `Invalid puzzle.`
-        stopGridAnimation()
-    }
+    display.textContent = `${time}ms`
+    stopGridAnimation(solved)
 }
 
 clearButton.addEventListener('click', () => {
@@ -112,17 +111,15 @@ function animateGrid() {
         }
     }
 }
+
 function stopGridAnimation(solved) {
     display.style.animationName = ''
     for (let i = 0; i < inputGrid.length; i++) {
         for (let j = 0; j < inputGrid[i].length; j++) {
-            let val = inputGrid[i][j].value
-            if (solved) {
-                val = solved[i][j]
-            }
-            inputGrid[i][j].addEventListener(
+            let input = inputGrid[i][j]
+            input.addEventListener(
                 'animationiteration', 
-                endAnimation.bind(inputGrid[i][j],val)
+                endAnimation.bind(input,solved[i][j])
             )
         }
     }

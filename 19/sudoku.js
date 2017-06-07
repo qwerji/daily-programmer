@@ -100,13 +100,13 @@ const Sudoku = (() => {
             // Rows
             const inThisRow = [], row = puzzle[i]
             for (let j = 0; j < row.length; j++) {
-                if (inThisRow.includes(row[j])) return false
+                if (inThisRow.includes(row[j]) && row[j] !== 0) return false
                 inThisRow.push(row[j])
             }
             // Columns
             const inThisCol = []
             for (let k = 0; k < puzzle.length; k++) {
-                if (inThisCol.includes(puzzle[k][i])) return false
+                if (inThisCol.includes(puzzle[k][i]) && puzzle[k][i] !== 0) return false
                 inThisCol.push(puzzle[k][i])
             }
         }
@@ -116,7 +116,7 @@ const Sudoku = (() => {
                 const inThisBox = []
                 for (let k = i; k < i+3; k++) {     // Each box's
                     for (let l = j; l < j+3; l++) { // members
-                        if (inThisBox.includes(puzzle[k][l])) return false
+                        if (inThisBox.includes(puzzle[k][l]) && puzzle[k][l] !== 0) return false
                         inThisBox.push(puzzle[k][l])
                     }
                 }
