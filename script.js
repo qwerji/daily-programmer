@@ -145,5 +145,30 @@ window.onload = () => {
     }
 }
 
-document.body.style.backgroundImage = `url(./images/time-backgrounds/${
-    Math.floor((((new Date().getHours() - 4 + 24) % 24) / 24) * 8)}.png)`
+const colors = [
+    { // Day
+        title: { text: 'black', bg: '#D1EBF8' }, 
+        subtitle: { text: 'black', bg: '#bcffb7' },
+        links: 'rgba(0,0,100,0.8)'
+    },
+    { // Night
+        title: { text: '#ffffff', bg: '#2b2846' }, 
+        subtitle: { text: '#ffffff', bg: '#27241f' },
+        links: 'snow'
+    }
+]
+
+const time = Math.floor((((new Date().getHours() + 20) % 24) / 24) * 8)
+document.body.style.backgroundImage = `url(./images/time-backgrounds/${time}.png)`
+
+const color = colors[time > 5 ? 1 : 0]
+h1.style.color = color.title.text
+h1.style.background = color.title.bg
+
+description.style.color = color.subtitle.text
+description.querySelector('span').style.color = color.subtitle.text
+description.style.background = color.subtitle.bg
+
+document.querySelectorAll('a').forEach(a => {
+    a.style.color = color.links
+})
