@@ -94,6 +94,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Sudoku Solver",
             href: '/19',
             imgSrc: './images/19.svg'
+        },
+        {
+            title: "Procrastination Deterrent",
+            href: '/20',
+            imgSrc: './images/20.svg'
         }
     ],
     challengeElts = []
