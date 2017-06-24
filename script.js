@@ -99,6 +99,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Procrastination Deterrent",
             href: '/20',
             imgSrc: './images/20.svg'
+        },
+        {
+            title: "Sleep Sort",
+            href: '/22',
+            imgSrc: './images/22.svg'
         }
     ],
     challengeElts = []
