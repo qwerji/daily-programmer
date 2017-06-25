@@ -104,6 +104,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Sleep Sort",
             href: '/22',
             imgSrc: './images/22.svg'
+        },
+        {
+            title: "Look And Say",
+            href: '/23',
+            imgSrc: './images/23.svg'
         }
     ],
     challengeElts = []
