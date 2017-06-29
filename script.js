@@ -109,6 +109,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "Look And Say",
             href: '/23',
             imgSrc: './images/23.svg'
+        },
+        {
+            title: "3 Column Display",
+            href: '/24',
+            imgSrc: './images/24.svg'
         }
     ],
     challengeElts = []
