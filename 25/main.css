@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Monaco, monospace;
+    color: snow;
+}
+
+body {
+    background: #333333;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+textarea {
+    background: #555555;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    width: 50%;
+}
+.code {
+    height: 300px;
+}
+
+input {
+    color: black;
+    font-size: 13px;
+}
+
+.areas {
+    text-align: center;
+}
+.in {
+    /*display: block;
+    margin: 0 auto;*/
+}
+
+.input {
+    padding: 13px;
+    border: none;
+    display: inline-block;
+    width: calc(45% - 46px);
+    vertical-align: top;
+}
+
+.run {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px 10px;
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    transition: 0.1s ease all;
+    width: 5%;
+}
+.run:hover {
+    color: #333333;
+    background: lightgreen;
+}

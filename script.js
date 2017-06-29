@@ -114,6 +114,11 @@ const challengesElt = document.querySelector('.challenges'),
             title: "3 Column Display",
             href: '/24',
             imgSrc: './images/24.svg'
+        },
+        {
+            title: "Brainf**k Interpreter",
+            href: '/25',
+            imgSrc: './images/25.svg'
         }
     ],
     challengeElts = []
